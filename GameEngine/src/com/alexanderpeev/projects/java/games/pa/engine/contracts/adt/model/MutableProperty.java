@@ -11,12 +11,12 @@ package com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model;
  *
  *         First generated: 2.06.2015 г. 8:51:09
  */
-public interface MuteableProperty<TValue> {
+public interface MutableProperty<TValue> {
 	void set(TValue value);
 
 	void clear();
 
-	Event<ValueChangingObservation<MuteableProperty<TValue>, TValue>> changing();
+	Event<ValueChangingObservation<MutableProperty<TValue>, TValue>> changing();
 
-	Event<ValueChangedObservation<MuteableProperty<TValue>, TValue>> changed();
+	Event<ValueChangedObservation<MutableProperty<TValue>, TValue>> changed();
 }

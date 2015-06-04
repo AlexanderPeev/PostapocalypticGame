@@ -12,6 +12,6 @@ package com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model;
  *         First generated: 2.06.2015 г. 8:49:54
  */
 public interface Property<TValue> extends ReadableProperty<TValue>,
-		MuteableProperty<TValue> {
+		MutableProperty<TValue> {
 
 }
