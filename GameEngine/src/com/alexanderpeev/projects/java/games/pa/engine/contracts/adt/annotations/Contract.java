@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model.ContractDescriptor;
 
 /**
- * TODO Write type description here.
+ * Annotates a type with a contract descriptor, which can be used.
  * 
  * @author Alexander Peev (user: Alexander Peev)
  *
@@ -25,5 +25,10 @@ import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model.Contr
 @Retention(RetentionPolicy.RUNTIME)
 @Target(value = { ElementType.TYPE })
 public @interface Contract {
+	/**
+	 * Specifies a contract descriptor for the annotated type.
+	 * 
+	 * @return The specified contract descriptor for the annotated type.
+	 */
 	Class<? extends ContractDescriptor<?>> descriptor();
 }

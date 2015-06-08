@@ -1,6 +1,5 @@
 /**
- * TODO Write file description here. 
- * First generated: 4.06.2015 г. 10:04:10
+ * Declares the ContractDescriptor&lt;TModule&gt; interface. 
  */
 package com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model;
 
@@ -8,8 +7,6 @@ package com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model;
  * TODO Write type description here.
  * 
  * @author Alexander Peev (user: Alexander Peev)
- *
- *         First generated: 4.06.2015 г. 10:04:10
  */
 public interface ContractDescriptor<TModule> {
 	boolean canDescribe(TModule instance);

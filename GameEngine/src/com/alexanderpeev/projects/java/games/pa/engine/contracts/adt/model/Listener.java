@@ -1,16 +1,22 @@
 /**
- * TODO Write file description here. 
- * First generated: 2.06.2015 г. 9:44:49
+ * Declares the Listener&lt;TObservation&gt; interface. 
  */
 package com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model;
 
 /**
- * TODO Write type description here.
+ * Models an event listener for a particular type of observation. This
+ * corresponds to an observer in the Observer pattern.
  * 
  * @author Alexander Peev (user: Alexander Peev)
- *
- *         First generated: 2.06.2015 г. 9:44:49
  */
 public interface Listener<TObservation> {
+	/**
+	 * The listener is notified about an observation by an event it is
+	 * subscribed to.
+	 * 
+	 * @param observation
+	 *            The supplied observation, which has occurred at the raised
+	 *            event.
+	 */
 	void observe(TObservation observation);
 }

@@ -33,11 +33,21 @@ public interface Event<TObservation> {
 	 *            notified.
 	 * 
 	 * @param after
-	 *            The supplied after listener
+	 *            The supplied after listener.
 	 */
 	void raise(TObservation observation, Listener<Event<TObservation>> after);
 
 	ReadableProperty<CountableSet<Listener<TObservation>>> listeners();
 
+	/**
+	 * Returns whether or not this event instance is synchronous, i.e. if calls
+	 * to {@link Event.raise} will always notify all listeners (including the
+	 * after listener, if provided) prior to returning.
+	 * 
+	 * @return Whether or not this event instance is synchronous, i.e. if calls
+	 *         to {@link Event.raise} will always notify all listeners
+	 *         (including the after listener, if provided) prior to returning.
+	 * 
+	 */
 	boolean isSynchronous();
 }

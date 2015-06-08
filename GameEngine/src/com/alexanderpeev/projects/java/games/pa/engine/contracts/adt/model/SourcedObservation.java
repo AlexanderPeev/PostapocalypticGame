@@ -1,16 +1,18 @@
 /**
- * TODO Write file description here. 
- * First generated: 2.06.2015 г. 9:40:37
+ * Declares the SourcedObservation&lt;TSource&gt; interface. 
  */
 package com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model;
 
 /**
- * TODO Write type description here.
+ * Models an observation which exposes information about its event source.
  * 
  * @author Alexander Peev (user: Alexander Peev)
- *
- *         First generated: 2.06.2015 г. 9:40:37
  */
 public interface SourcedObservation<TSource> {
+	/**
+	 * Exposes the event source of this instance.
+	 * 
+	 * @return The event source of this instance.
+	 */
 	TSource source();
 }
