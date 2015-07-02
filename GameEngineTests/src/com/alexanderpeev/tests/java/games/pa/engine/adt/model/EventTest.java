@@ -9,7 +9,7 @@ import static org.junit.Assert.fail;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.CountableSet;
+import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.MutableSet;
 import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model.Event;
 import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model.Listener;
 import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model.ReadableProperty;
@@ -28,12 +28,12 @@ public class EventTest {
 		Assert.assertNotNull(event);
 		Assert.assertNotNull(observation);
 
-		ReadableProperty<CountableSet<Listener<T>>> property = event
+		ReadableProperty<MutableSet<Listener<T>>> property = event
 				.listeners();
 
 		Assert.assertNotNull(property);
 
-		CountableSet<Listener<T>> listeners = property.get();
+		MutableSet<Listener<T>> listeners = property.get();
 
 		Assert.assertNotNull(listeners);
 

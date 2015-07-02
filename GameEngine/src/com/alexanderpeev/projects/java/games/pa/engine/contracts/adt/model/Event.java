@@ -3,7 +3,7 @@
  */
 package com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.model;
 
-import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.CountableSet;
+import com.alexanderpeev.projects.java.games.pa.engine.contracts.adt.MutableSet;
 
 /**
  * Declares a multicast event, which can be raised with a particular
@@ -37,7 +37,12 @@ public interface Event<TObservation> {
 	 */
 	void raise(TObservation observation, Listener<Event<TObservation>> after);
 
-	ReadableProperty<CountableSet<Listener<TObservation>>> listeners();
+	/**
+	 * Exposes the listeners (i.e. observers) of this event.
+	 * 
+	 * @return The listeners (i.e. observers) of this event.
+	 */
+	ReadableProperty<MutableSet<Listener<TObservation>>> listeners();
 
 	/**
 	 * Returns whether or not this event instance is synchronous, i.e. if calls
